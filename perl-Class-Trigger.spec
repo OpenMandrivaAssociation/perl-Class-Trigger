@@ -1,6 +1,6 @@
 %define module	Class-Trigger
 %define name	perl-%{module}
-%define version 0.11
+%define version 0.12
 %define release %mkrel 1
 
 Name:		%{name}
@@ -9,13 +9,12 @@ Release:	%{release}
 Summary:	Mixin to add / call inheritable triggers
 License:	GPL or Artistic
 Group:		Development/Perl
-source:		http://search.cpan.org/dist/M/MI/MIYAGAWA/%{module}-%{version}.tar.bz2
 URL:		http://search.cpan.org/dist/%{module}
-BuildRequires:	perl-devel
-BuildRequires:  perl-Class-Data-Inheritable
-BuildRequires:  perl-IO-stringy
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+Source:     http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar.gz
+BuildRequires:  perl(Class::Data::Inheritable)
+BuildRequires:  perl(IO::Stringy)
 BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Class::Trigger is a mixin class to add / call triggers (or hooks)
