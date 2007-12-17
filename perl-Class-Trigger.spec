@@ -14,7 +14,6 @@ Source:     http://www.cpan.org/modules/by-module/Class/%{module}-%{version}.tar
 BuildRequires:  perl(Class::Data::Inheritable)
 BuildRequires:  perl(IO::Stringy)
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Class::Trigger is a mixin class to add / call triggers (or hooks)
