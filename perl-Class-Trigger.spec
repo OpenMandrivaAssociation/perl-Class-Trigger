@@ -1,15 +1,13 @@
 %define upstream_name	 Class-Trigger
-%define upstream_version 0.14
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Version:	0.14
+Release:	6
 
 Summary:	Mixin to add / call inheritable triggers
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/Class/%{upstream_name}-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ Class::Trigger is a mixin class to add / call triggers (or hooks)
 that get called at some points you specify.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -51,9 +49,7 @@ make test
 
 * Wed Jul 29 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.130.0-1mdv2010.0
 + Revision: 403015
-- rebuild using %%perl_convert_version
-
-* Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.13-3mdv2009.0
+- rebuild using %0.14 Wed Jul 30 2008 Thierry Vignaud <tv@mandriva.org> 0.13-3mdv2009.0
 + Revision: 256034
 - rebuild
 
